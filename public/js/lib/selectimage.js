@@ -13,7 +13,7 @@ $(document).ready(() => {
 		$("div.body").append("<button class='btn btn-primary back'>Back</button>")
 
 		$("button.back").click(function() {
-			$("img.boundary").remove()
+			$("img.boundary").parent().remove()
 			$(this).remove()
 			$("div.imageView").show()
 		})
