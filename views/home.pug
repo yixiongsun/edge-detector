@@ -1,0 +1,36 @@
+extends layout
+
+
+
+block content
+  script. 
+    numImages = #{images}
+  script(src='/js/lib/jquery.min.js')
+
+  script(src="/js/lib/selectimage.js")
+
+  link(rel='stylesheet', href='/css/home.css')
+  h1 Stuff
+  p.lead Outline objects.
+  div.loader
+  div.imageView
+    div.images 
+    
+
+
+    .row
+      .col-md-6
+        form(action='/upload', role='form', enctype='multipart/form-data', method='POST')
+          .form-group
+            label.col-form-label.font-weight-bold File Input
+            .col-md-6
+              input(type='file', name='myFile')
+          button.btn.btn-primary(type='submit') Submit
+
+
+
+
+  
+  
+
+
